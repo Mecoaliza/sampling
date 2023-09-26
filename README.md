@@ -96,7 +96,7 @@ svytotal(~P85, AAS)
 N^2*(1/n-1/N)*var(amostra$P85)
 ````
 
-### Agora vamos utilizar o ggplot2 para criar um gráfico de barras e visualizar quais a RegiÕes Geográficas ficaram com mais amostras
+### Agora vamos utilizar o ggplot2 para criar um gráfico de barras e visualizar quais a Regiões Geográficas ficaram com mais amostras
 
 ````
 ggplot(amostra, aes(x = factor(REG))) +
@@ -104,5 +104,16 @@ ggplot(amostra, aes(x = factor(REG))) +
   labs(x = "Região Geográfica", y = "Contagem") +
   ggtitle("Distribuição das Regiões Geográficas na Amostra")
 ````
+![](https://github.com/Mecoaliza/sampling/blob/main/3.png)
 
-![Saída](C:\Users\mecoa\Desktop\3.png)
+
+
+### E visualizar um gráfico boxplt para saber a Distribuição da População por Região na Amostra
+
+````
+ggplot(amostra, aes(x = factor(REG), y = P85)) +
+  geom_boxplot() +
+  labs(x = "Região Geográfica", y = "População de 1985") +
+  ggtitle("Distribuição da População de 1985 por Região na Amostra")
+````
+![Saída](https://github.com/Mecoaliza/sampling/blob/main/2.png)
